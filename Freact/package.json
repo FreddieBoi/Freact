@@ -1,0 +1,28 @@
+{
+  "name": "freact",
+  "version": "0.0.1",
+  "description": "Testing react",
+  "author": "Freddie <freddieboi@gmail.com>",
+  "contributors": [
+    {
+      "name": "Freddie",
+      "email": "freddieboi@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FreddieBoi/Freact"
+  },
+  "bugs": {
+    "url": "https://github.com/FreddieBoi/Freact/issues"
+  },
+  "keywords": [
+    "react",
+    "asp.net",
+    "example"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "private": true,
+  "license": "Beerware"
+}

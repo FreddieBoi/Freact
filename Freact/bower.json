@@ -1,0 +1,30 @@
+{
+  "name": "Freact",
+  "version": "0.0.1",
+  "authors": [
+    "Freddie <freddieboi@gmail.com>"
+  ],
+  "description": "Testing react",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "example",
+    "react",
+    "asp.net"
+  ],
+  "license": "Beerware",
+  "homepage": "https://github.com/FreddieBoi/Freact",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "react": "~0.13.3",
+    "bootstrap": "~3.3.5"
+  }
+}

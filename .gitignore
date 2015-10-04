@@ -14,5 +14,7 @@ packages
 bower_components
 typings
 
-# Minified
+# Compiled & Minified
+*.js
+*.css
 *.min.*
