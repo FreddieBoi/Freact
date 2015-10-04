@@ -1,0 +1,18 @@
+*suo
+*Resharper*
+*.DotSettings.*
+*.user
+.vs
+
+# Build Folders
+bin
+obj
+
+# Packages
+node_modules
+packages
+bower_components
+typings
+
+# Minified
+*.min.*
