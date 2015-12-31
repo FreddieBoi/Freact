@@ -11,6 +11,7 @@ namespace Freact.Controllers {
             new Task {
                 Id = 1,
                 Name = "First task",
+                Description = "This is my first task.",
                 IsCompleted = false
             },
             new Task {
@@ -20,7 +21,8 @@ namespace Freact.Controllers {
             },
             new Task {
                 Id = 3,
-                Name ="Completed task",
+                Name = "Completed task",
+                Description = "Do some stuff!",
                 IsCompleted = true
             }
         };

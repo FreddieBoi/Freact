@@ -10,6 +10,7 @@
 interface TaskProps extends React.Props<any> {
     id: number;
     name: string;
+    description: string;
     isCompleted?: boolean;
 }
 
@@ -18,9 +19,10 @@ class TaskComponent extends React.Component<TaskProps, {}> {
         var classes = classNames({
             "task": true,
             "task-completed": this.props.isCompleted
+
         });
         return <li className={classes}>
-            <strong>{ this.props.name }</strong>
+            <strong className="task-name">{ this.props.name }</strong> <span className="task-description">{ this.props.description }</span>
             </li>;
     }
 }
