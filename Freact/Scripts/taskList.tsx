@@ -8,10 +8,14 @@
 // Whole-script strict mode syntax
 "use strict";
 
-class TaskListComponent extends React.Component<any, {}> {
+interface TaskListProps extends React.Props<any> {
+    tasks: ITaskModel[];
+}
+
+class TaskListComponent extends React.Component<TaskListProps, {}> {
     render() {
-        var tasks = this.props.data.map((task: any) => {
-            return <TaskComponent key={task.Id} id={task.Id} name={task.Name} isCompleted={task.IsCompleted} />;
+        var tasks = this.props.tasks.map((task: ITaskModel) => {
+            return <TaskComponent key={task.Id} id={task.Id} name={task.Name} description={task.Description} isCompleted={task.IsCompleted} />;
         });
         var classes = classNames({
             "task-list": true,

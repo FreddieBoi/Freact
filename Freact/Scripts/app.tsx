@@ -8,10 +8,17 @@
 // Whole-script strict mode syntax
 "use strict";
 
+interface ITaskModel {
+    Id: number;
+    Name: string;
+    Description: string;
+    IsCompleted: boolean;
+}
+
 $(() => {
     $.getJSON("api/tasks")
         .done((data: any) => {
-            var content = <TaskListComponent data={data} />;
+            var content = <TaskListComponent tasks={data} />;
             React.render(content, document.getElementById("tasks"));
         });
 });
