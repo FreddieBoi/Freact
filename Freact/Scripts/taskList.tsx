@@ -1,4 +1,5 @@
 ﻿/// <reference path="../typings/tsd.d.ts" />
+/// <reference path="taskModel.d.ts" />
 /// <reference path="task.tsx" />
 
 // A '.tsx' file enables JSX support in the TypeScript compiler, 
@@ -13,7 +14,8 @@ interface TaskListProps extends React.Props<any> {
 }
 
 class TaskListComponent extends React.Component<TaskListProps, {}> {
-    render() {
+
+    public render(): JSX.Element {
         var tasks = this.props.tasks.map((task: ITaskModel) => {
             return <TaskComponent key={task.Id} id={task.Id} name={task.Name} description={task.Description} isCompleted={task.IsCompleted} />;
         });
@@ -25,4 +27,5 @@ class TaskListComponent extends React.Component<TaskListProps, {}> {
             {tasks}
             </ul>;
     }
+
 }
