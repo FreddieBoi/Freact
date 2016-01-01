@@ -92,6 +92,7 @@
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="out\app.css" />
+    <Content Include="out\app.js" />
     <Content Include="out\app.min.css">
       <DependentUpon>app.css</DependentUpon>
     </Content>

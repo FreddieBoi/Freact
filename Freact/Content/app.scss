@@ -1,9 +1,9 @@
 ﻿.task {
-    &.task-completed {
-        color: green;
-    }
+    margin: 10px 0;
 
-    .task-description {
-        color: #333;
+    &.task-completed {
+        .task-name {
+            color: green;
+        }
     }
 }

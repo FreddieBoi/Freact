@@ -15,14 +15,21 @@ interface TaskProps extends React.Props<any> {
 }
 
 class TaskComponent extends React.Component<TaskProps, {}> {
-    render() {
+
+    private getDescriptionAsRawMarkup() {
+        var rawMarkup = marked(this.props.description || "", { sanitize: true });
+        return { __html: rawMarkup };
+    }
+
+    public render(): JSX.Element {
         var classes = classNames({
             "task": true,
             "task-completed": this.props.isCompleted
 
         });
         return <li className={classes}>
-            <strong className="task-name">{ this.props.name }</strong> <span className="task-description">{ this.props.description }</span>
+            <strong className="task-name">{ this.props.name }</strong> <span className="task-description" dangerouslySetInnerHTML={ this.getDescriptionAsRawMarkup() }></span>
             </li>;
     }
+
 }
