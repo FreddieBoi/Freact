@@ -24,13 +24,26 @@ class TaskBoxComponent extends React.Component<TaskBoxProps, TaskBoxState> {
         this.state = { tasks: [] };
     }
 
+    private handleSearchSubmit: (term: string) => void = (term) => {
+        $.ajax({
+            url: this.props.url + (term ? "?" + $.param({ term: term }) : ""),
+            dataType: "json",
+            type: "get",
+            cache: false
+        }).done((data: ITaskModel[]) => {
+            this.setState({ tasks: data });
+        }).fail((xhr, status, err) => {
+            console.error(this.props.url, status, err.toString());
+        });
+    };
+
     public componentDidMount(): void {
         $.ajax({
             url: this.props.url,
             dataType: "json",
             method: "get",
             cache: false
-        }).done((data) => {
+        }).done((data: ITaskModel[]) => {
             this.setState({ tasks: data });
         }).fail((xhr, status, err) => {
             console.error(this.props.url, status, err.toString());
@@ -40,7 +53,7 @@ class TaskBoxComponent extends React.Component<TaskBoxProps, TaskBoxState> {
     public render(): JSX.Element {
         return <div className="taskBox">
             <h1>Tasks</h1>
-            <TaskSearchComponent />
+            <TaskSearchComponent onSearchSubmit={this.handleSearchSubmit} />
             <TaskListComponent tasks={this.state.tasks} />
             </div>;
     }

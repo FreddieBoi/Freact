@@ -27,8 +27,11 @@ namespace Freact.Controllers {
             }
         };
 
-        public IEnumerable<Task> GetTasks() {
-            return tasks;
+        public IEnumerable<Task> GetTasks([FromUri] string term = null) {
+            if (string.IsNullOrWhiteSpace(term)) {
+                return tasks;
+            }
+            return tasks.Where(x => x.Name.ToLower().Contains(term.ToLower()));
         }
 
         public IHttpActionResult GetTask(int id) {

@@ -8,11 +8,34 @@
 // Whole-script strict mode syntax
 "use strict";
 
-class TaskSearchComponent extends React.Component<any, {}> {
+interface TaskSearchProps extends React.Props<any> {
+    onSearchSubmit: (term: string) => void;
+}
+
+interface TaskSearchState extends React.Props<any> {
+    term: string;
+}
+
+class TaskSearchComponent extends React.Component<any, TaskSearchState> {
+
+    constructor(props?: TaskBoxProps, context?: any) {
+        super(props, context);
+        this.state = { term: "" };
+    }
+
+    public handleTermChange: (e: any) => void = (e) => {
+        this.setState({ term: e.target.value });
+    };
+
+    public handleSubmit: (e: any) => void = (e) => {
+        e.preventDefault();
+        var term = $.trim(this.state.term);
+        this.props.onSearchSubmit(term);
+    };
 
     public render(): JSX.Element {
-        return <form className="form-inline">
-            <input className="form-control" type="text" placeholder="Search" />
+        return <form className="form-inline" onSubmit={this.handleSubmit}>
+            <input className="form-control" type="text" placeholder="Search" value={this.state.term} onChange={this.handleTermChange} />
             <button className="btn btn-default" type="submit">Search</button>
             </form>;
     }
