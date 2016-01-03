@@ -25,6 +25,7 @@ class TaskBoxComponent extends React.Component<TaskBoxProps, TaskBoxState> {
     }
 
     private handleSearchSubmit: (term: string) => void = (term) => {
+        console.debug("search: " + term);
         $.ajax({
             url: this.props.url + (term ? "?" + $.param({ term: term }) : ""),
             dataType: "json",

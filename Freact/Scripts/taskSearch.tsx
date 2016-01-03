@@ -16,18 +16,26 @@ interface TaskSearchState extends React.Props<any> {
     term: string;
 }
 
-class TaskSearchComponent extends React.Component<any, TaskSearchState> {
+class TaskSearchComponent extends React.Component<TaskSearchProps, TaskSearchState> {
 
-    constructor(props?: TaskBoxProps, context?: any) {
+    constructor(props?: TaskSearchProps, context?: any) {
         super(props, context);
         this.state = { term: "" };
     }
 
-    public handleTermChange: (e: any) => void = (e) => {
-        this.setState({ term: e.target.value });
+    private handleTermChange: React.FormEventHandler = (e) => {
+        e.stopPropagation();
+        e.nativeEvent.stopImmediatePropagation();
+        var target: any = e.target;
+        var value: string = target ? target.value : "";
+        if (value != this.state.term) {
+            this.setState({ term: value });
+            var term = $.trim(value);
+            this.props.onSearchSubmit(term);
+        }
     };
 
-    public handleSubmit: (e: any) => void = (e) => {
+    private handleSubmit: React.FormEventHandler = (e) => {
         e.preventDefault();
         var term = $.trim(this.state.term);
         this.props.onSearchSubmit(term);
@@ -35,7 +43,7 @@ class TaskSearchComponent extends React.Component<any, TaskSearchState> {
 
     public render(): JSX.Element {
         return <form className="form-inline" onSubmit={this.handleSubmit}>
-            <input className="form-control" type="text" placeholder="Search" value={this.state.term} onChange={this.handleTermChange} />
+            <input className="form-control" type="text" placeholder="Search" defaultValue={this.state.term} onChange={this.handleTermChange} onKeyUp={this.handleTermChange} />
             <button className="btn btn-default" type="submit">Search</button>
             </form>;
     }
