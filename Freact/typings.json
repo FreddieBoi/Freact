@@ -1,11 +1,13 @@
 {
   "name": "freact",
   "globalDependencies": {
-    "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#98d3168c2c570352a3a7393788e2ec9fbb08ade6",
-    "react-global": "github:DefinitelyTyped/DefinitelyTyped/react/react-global.d.ts#98d3168c2c570352a3a7393788e2ec9fbb08ade6",
-    "react": "github:DefinitelyTyped/DefinitelyTyped/react/react.d.ts#98d3168c2c570352a3a7393788e2ec9fbb08ade6",
     "classnames": "github:DefinitelyTyped/DefinitelyTyped/classnames/classnames.d.ts#98d3168c2c570352a3a7393788e2ec9fbb08ade6",
-    "marked": "github:DefinitelyTyped/DefinitelyTyped/marked/marked.d.ts#dc9dabe74a5be62613b17a3605309783a12ff28a"
+    "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#98d3168c2c570352a3a7393788e2ec9fbb08ade6",
+    "marked": "github:DefinitelyTyped/DefinitelyTyped/marked/marked.d.ts#dc9dabe74a5be62613b17a3605309783a12ff28a",
+    "react": "registry:dt/react#0.14.0+20160526134601",
+    "react-addons-update": "registry:dt/react-addons-update#0.14.0+20160316155526",
+    "react-dom": "registry:dt/react-dom#0.14.0+20160412154040",
+    "react-global": "registry:dt/react-global#0.14.0+20160316155526"
   },
   "resolution": "typings"
 }

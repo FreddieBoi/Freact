@@ -10,5 +10,5 @@
 
 $(() => {
     var content = <TaskBoxComponent url="api/tasks" />;
-    React.render(content, document.getElementById("tasks"));
+    ReactDOM.render(content, document.getElementById("tasks"));
 });
