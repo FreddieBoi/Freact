@@ -1,4 +1,4 @@
-﻿/// <reference path="../typings/tsd.d.ts" />
+﻿/// <reference path="../typings/index.d.ts" />
 /// <reference path="taskList.tsx" />
 
 // A '.tsx' file enables JSX support in the TypeScript compiler, 

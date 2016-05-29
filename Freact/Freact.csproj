@@ -112,10 +112,10 @@
     <Content Include="packages.config" />
     <Content Include="package.json" />
     <Content Include="tsconfig.json" />
-    <Content Include="tsd.json" />
     <None Include="bower.json" />
     <Content Include="Content\app.scss" />
     <None Include="compilerconfig.json" />
+    <Content Include="typings.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

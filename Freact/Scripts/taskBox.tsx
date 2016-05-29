@@ -1,4 +1,4 @@
-﻿/// <reference path="../typings/tsd.d.ts" />
+﻿/// <reference path="../typings/index.d.ts" />
 /// <reference path="taskModel.d.ts" />
 /// <reference path="taskList.tsx" />
 
