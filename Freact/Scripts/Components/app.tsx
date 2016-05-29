@@ -1,4 +1,7 @@
 ﻿/// <reference path="../../typings/index.d.ts" />
+/// <reference path="../CustomTypings/react-redux-global.d.ts" />
+/// <reference path="../State/state.d.ts" />
+/// <reference path="../State/actions.ts" />
 /// <reference path="taskBox.tsx" />
 
 // A '.tsx' file enables JSX support in the TypeScript compiler, 
@@ -12,11 +15,7 @@ interface AppProps extends React.Props<any> {
     url: string;
 }
 
-interface AppState extends React.Props<any> {
-    tasks: ITaskModel[];
-}
-
-class App extends React.Component<AppProps, AppState> {
+class AppComponent extends React.Component<AppProps, AppState> {
 
     public render(): JSX.Element {
         return <TaskBoxComponent url={this.props.url} />;
@@ -24,14 +23,14 @@ class App extends React.Component<AppProps, AppState> {
 
 }
 
-//let mapStateToProps = (state: any) => {
-//    return state
-//}
+let mapStateToProps = (state: any) => {
+    return state;
+}
 
-//let mapDispatchToProps = (dispatch: any) => {
-//    return {
-//        actions: Redux.bindActionCreators(FreactActions., dispatch)
-//    }
-//}
+let mapDispatchToProps = (dispatch: any) => {
+    return {
+        actions: Redux.bindActionCreators(actions, dispatch)
+    }
+}
 
-//Redux.connect(mapStateToProps, mapDispatchToProps)(App);
+ReactRedux.connect(mapStateToProps, mapDispatchToProps)(AppComponent);

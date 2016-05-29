@@ -132,6 +132,11 @@
     <TypeScriptCompile Include="Scripts\Components\taskSearch.tsx" />
     <TypeScriptCompile Include="Scripts\Components\taskBox.tsx" />
     <TypeScriptCompile Include="Scripts\Components\taskList.tsx" />
+    <TypeScriptCompile Include="Scripts\CustomTypings\react-redux-global.d.ts" />
+    <TypeScriptCompile Include="Scripts\State\state.d.ts" />
+    <TypeScriptCompile Include="Scripts\State\actions.ts" />
+    <TypeScriptCompile Include="Scripts\State\reducer.ts" />
+    <TypeScriptCompile Include="Scripts\State\store.ts" />
     <TypeScriptCompile Include="Scripts\taskModel.d.ts" />
   </ItemGroup>
   <ItemGroup>
