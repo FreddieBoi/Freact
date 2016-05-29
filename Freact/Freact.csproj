@@ -111,7 +111,6 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="package.json" />
-    <Content Include="tsconfig.json" />
     <None Include="bower.json" />
     <Content Include="Content\app.scss" />
     <None Include="compilerconfig.json" />
@@ -127,11 +126,12 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="Scripts\task.tsx" />
-    <TypeScriptCompile Include="Scripts\app.tsx" />
-    <TypeScriptCompile Include="Scripts\taskSearch.tsx" />
-    <TypeScriptCompile Include="Scripts\taskBox.tsx" />
-    <TypeScriptCompile Include="Scripts\taskList.tsx" />
+    <TypeScriptCompile Include="Scripts\Components\index.tsx" />
+    <TypeScriptCompile Include="Scripts\Components\task.tsx" />
+    <TypeScriptCompile Include="Scripts\Components\app.tsx" />
+    <TypeScriptCompile Include="Scripts\Components\taskSearch.tsx" />
+    <TypeScriptCompile Include="Scripts\Components\taskBox.tsx" />
+    <TypeScriptCompile Include="Scripts\Components\taskList.tsx" />
     <TypeScriptCompile Include="Scripts\taskModel.d.ts" />
   </ItemGroup>
   <ItemGroup>
@@ -145,10 +145,11 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <TypeScriptTarget>ES6</TypeScriptTarget>
     <TypeScriptJSXEmit>React</TypeScriptJSXEmit>
-    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptCompileOnSaveEnabled>False</TypeScriptCompileOnSaveEnabled>
     <TypeScriptNoImplicitAny>True</TypeScriptNoImplicitAny>
-    <TypeScriptModuleKind>None</TypeScriptModuleKind>
-    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptModuleKind>
+    </TypeScriptModuleKind>
+    <TypeScriptRemoveComments>True</TypeScriptRemoveComments>
     <TypeScriptOutFile>out\app.js</TypeScriptOutFile>
     <TypeScriptOutDir>
     </TypeScriptOutDir>

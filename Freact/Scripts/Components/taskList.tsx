@@ -1,5 +1,5 @@
-﻿/// <reference path="../typings/index.d.ts" />
-/// <reference path="taskModel.d.ts" />
+﻿/// <reference path="../../typings/index.d.ts" />
+/// <reference path="../taskModel.d.ts" />
 /// <reference path="task.tsx" />
 
 // A '.tsx' file enables JSX support in the TypeScript compiler, 

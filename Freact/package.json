@@ -22,7 +22,16 @@
     "example"
   ],
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-redux": "^4.4.5",
+    "redux": "^3.5.2",
+    "redux-devtools": "^3.3.1",
+    "typescript": "^1.8.10",
+    "typings": "^1.0.4"
+  },
   "private": true,
   "license": "Beerware"
 }

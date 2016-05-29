@@ -1,4 +1,4 @@
-﻿/// <reference path="../typings/index.d.ts" />
+﻿/// <reference path="../../typings/index.d.ts" />
 /// <reference path="taskBox.tsx" />
 
 // A '.tsx' file enables JSX support in the TypeScript compiler, 
@@ -9,6 +9,11 @@
 "use strict";
 
 $(() => {
-    var content = <TaskBoxComponent url="api/tasks" />;
-    ReactDOM.render(content, document.getElementById("tasks"));
+    //let initialState = {
+    //    tasks: []
+    //}
+
+    //let store = FreactStore.configureStore(initialState)
+
+    ReactDOM.render(<App url="api/tasks" />, document.getElementById("app"));
 });
