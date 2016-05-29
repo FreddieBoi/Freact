@@ -1,4 +1,7 @@
 ﻿/// <reference path="../../typings/index.d.ts" />
+/// <reference path="../CustomTypings/index.d.ts" />
+/// <reference path="../State/state.d.ts" />
+/// <reference path="../State/reducer.ts" />
 /// <reference path="app.tsx" />
 
 // A '.tsx' file enables JSX support in the TypeScript compiler, 
@@ -9,10 +12,14 @@
 "use strict";
 
 $(() => {
-    //let initialState = {
-    //    tasks: []
-    //}
+    let initialState: AppState = {
+        tasks: []
+    };
 
-    //let store = FreactStore.configureStore(initialState)
-    ReactDOM.render(<AppComponent url="api/tasks" />, document.getElementById("app"));
+    let store = Redux.createStore(reducer, initialState);
+    ReactDOM.render(
+        <ReactRedux.Provider store={store}>
+            <AppComponent url="api/tasks" />
+        </ReactRedux.Provider>,
+        document.getElementById("app"));
 });

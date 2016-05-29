@@ -1,5 +1,5 @@
 ﻿/// <reference path="../../typings/index.d.ts" />
-/// <reference path="../CustomTypings/react-redux-global.d.ts" />
+/// <reference path="../CustomTypings/index.d.ts" />
 /// <reference path="../State/state.d.ts" />
 /// <reference path="../State/actions.ts" />
 /// <reference path="taskBox.tsx" />
