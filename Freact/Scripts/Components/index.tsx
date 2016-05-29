@@ -11,12 +11,14 @@
 // Whole-script strict mode syntax
 "use strict";
 
+let createFreactStore = Redux.compose(Redux.applyMiddleware(reduxLogger()))(Redux.createStore);
+
 $(() => {
     let initialState: AppState = {
         tasks: []
     };
 
-    let store = Redux.createStore(reducer, initialState);
+    let store = createFreactStore(reducer, initialState);
     ReactDOM.render(
         <ReactRedux.Provider store={store}>
             <AppComponent url="api/tasks" />

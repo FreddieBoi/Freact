@@ -134,6 +134,7 @@
     <TypeScriptCompile Include="Scripts\Components\taskList.tsx" />
     <TypeScriptCompile Include="Scripts\CustomTypings\index.d.ts" />
     <TypeScriptCompile Include="Scripts\CustomTypings\react-redux-global.d.ts" />
+    <TypeScriptCompile Include="Scripts\CustomTypings\redux-logger-global.d.ts" />
     <TypeScriptCompile Include="Scripts\State\state.d.ts" />
     <TypeScriptCompile Include="Scripts\State\actions.ts" />
     <TypeScriptCompile Include="Scripts\State\reducer.ts" />
